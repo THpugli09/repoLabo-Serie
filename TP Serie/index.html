@@ -15,15 +15,16 @@
             <img src="Imagenes/Logo.png" alt="Logo" style="height: 30px;">
         </div>
         <ul>
-            <li><a href="#Serie">Serie</a></li>
-            <li><a href="#episodios">Episodios</a></li>
-            <li><a href="#personajes">Personajes</a></li>
-            <li><a href="#galeria">Galería</a></li>
-            <li><a href="#mitologia">Mitología</a></li>
+            <li><a href="#homeNV">Home</a></li>
+            <li><a href="#serieNV">Serie</a></li>
+            <li><a href="#personajesNV">Personajes</a></li>
+            <li><a href="#galeriaNV">Galería</a></li>
+            <li><a href="#mitologiaNV">Mitología</a></li>
+            <li><a href="#contactoNV">Contacto</a></li>
         </ul>
     </nav>
     <!-- Header con imagen de fondo y botón de explorar" -->
-    <header>   
+    <header id="homeNV" class="home">   
         <h1>Blood of Zeus</h1>
         <button onclick="document.getElementById('serie').scrollIntoView({behavior: 'smooth'});">Explorar</button>
         <link rel="background-image" href="Background.png">
@@ -32,7 +33,7 @@
     
 
     <!-- serie -->
-    <section class="serie">
+    <section id="serieNV" class="serie">
         <h2>Serie:</h2>
             <h3>Sinopsis:</h3>
                 <p>Blood of Zeus (T1) cuenta la historia de Heron, un mortal que descubre ser hijo de Zeus y que debe enfrentarse a demonios y dioses en una batalla épica por el destino de la humanidad.</p>
@@ -126,7 +127,7 @@
         </section>
 
     <!-- Personajes -->
-    <section class="personajes">
+    <section id="personajesNV" class="personajes">
         <h2>Personajes:</h2>
         <ul>
             <li>
@@ -188,7 +189,7 @@
     </section>
 
     <!-- Galería -->
-    <div class="galeria">
+    <div id="galeriaNV" class="galeria">
         <img src="Imagenes/Galeria/imagen1.jpg" alt="Hijos_de_Zeus" onclick="openImageViewer(0)">
         <img src="Imagenes/Galeria/imagen2.webp" alt="TeamHeron" onclick="openImageViewer(1)">
         <img src="Imagenes/Galeria/imagen3.jpg" alt="Zeus" onclick="openImageViewer(2)">
@@ -201,13 +202,15 @@
     </div>
     
     <!-- Mitología -->
-    <section id="mitologia">
+    <section id="mitologiaNV" class="mitologia">
         <h2>Mitología:</h2>
         <p>Comparación y diferencias de la mitología y la serie.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta beatae rerum excepturi consequuntur fugit quis aliquam! Quisquam rerum, molestiae doloremque vero quam, ducimus delectus nulla consequuntur suscipit harum, enim modi.
         </p>
     </section>
-
-     <!-- Contacto con formulario y Footer -->
+    <section id="contactoNV" class="contacto">
+        <h2>Contacto:</h2>
+    </section>
+     <!-- formulario y Footer -->
 </body>
 </html>
