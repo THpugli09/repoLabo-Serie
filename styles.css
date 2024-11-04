@@ -137,13 +137,14 @@ button:hover {
 
 /* Galería sin visualizador */
 .galeria {
-    display: grid;
+    display: inline-block;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
-    
+    text-align: center;
 }
 .galeria h2 {
+    display: grid;
     font-size: 4em;
     padding: 35px;
 }
