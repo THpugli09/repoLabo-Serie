@@ -1,26 +1,42 @@
-let currentIndex = 0;
-const images = document.querySelectorAll('.galeria img');
-const viewer = document.getElementById('visualizador');
-const viewerImage = document.getElementById('portaImagenes');
+function AbrVisualizador(imagen) {
+    var visualizador = document.getElementById("visualizador");
+    var visualizadorImg = document.getElementById("visual-imagen");
 
-function openImageViewer(index) {
-    currentIndex = index;
-    viewerImage.src = images[currentIndex].src;
-    viewer.style.display = 'flex';
+    visualizador.style.display = "flex";
+    visualizadorImg.src = imagen.src;
+
+    visualizadorImg.style.width = "100%";
+    visualizadorImg.style.height = "auto";
 }
 
-/*function closeImageViewer(event) {
-    if (event && event.target === viewer) { // Solo cierra al hacer clic fuera de la imagen o en "X"
-        viewer.style.display = 'none';
+function CrrVisualizador() {
+    var visualizador = document.getElementById("visualizador");
+    visualizador.style.display = "none";
+}
+
+/*let currentIndex = 0;
+const Imagen = document.querySelectorAll('.Imagenes') ('.galeria img');
+const Miro = document.getElementById('portaImagenes');
+const Porta = document.getElementById('Visualizador');
+
+function AbreImagen(index) {
+    currentIndex = index;
+    Porta.src = Imagen[currentIndex].src;
+    Miro.style.display = 'flex';
+}
+
+function cierraImagen(event) {
+    if (event && event.target === Miro) { // Solo cierra al hacer clic fuera de la imagen o en "X"
+        Miro.style.display = 'none';
     } else if (!event) { // Cierra desde el botón "X"
-        viewer.style.display = 'none';
+        Miro.style.display = 'none';
     }
 }
 
 // Cerrar el visualizador si se hace clic en el contenedor oscuro
-viewer.addEventListener('click', function(event) {
-    if (event.target === viewer) {
-        closeImageViewer();
+Miro.addEventListener('click', function(event) {
+    if (event.target === Miro) {
+        cierraImagen();
     }
 });*/
 
@@ -29,20 +45,20 @@ viewer.addEventListener('click', function(event) {
 function muestraSpoiler() {
     var spoilers = document.getElementsByClassName("Spoiler");
     for (var i = 0; i < spoilers.length; i++) {
-        if (spoilers[i].style.visibility == 'hidden') {
-            spoilers[i].style.visibility = 'visible';
+        if (spoilers[i].style.display  === 'none') {
+            spoilers[i].style.display = 'block ';
         } else {
-            spoilers[i].style.visibility = 'hidden';
+            spoilers[i].style.display = 'none';
         }
     }
 }
 function muestraSpoiler2() {
     var spoilers = document.getElementsByClassName("Spoiler2");
     for (var i = 0; i < spoilers.length; i++) {
-        if (spoilers[i].style.visibility == 'hidden') {
-            spoilers[i].style.visibility = 'visible';
+        if (spoilers[i].style.display === 'none') {
+            spoilers[i].style.display = 'block ';
         } else {
-            spoilers[i].style.visibility = 'hidden';
+            spoilers[i].style.display = 'none';
         }
     }
 }
