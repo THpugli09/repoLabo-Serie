@@ -260,3 +260,8 @@ button:hover {
 .contacto-formulario form button:hover {
     background-color: #c5303b;
 }
+
+footer{
+    height: 30px;
+    margin-top: 1px;
+}
