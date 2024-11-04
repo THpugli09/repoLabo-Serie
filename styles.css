@@ -19,6 +19,10 @@ nav {
     width: 100%;           
     z-index: 10;             /* por encima de otros elementos */
 }
+nav input, label{
+    display: none;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -212,6 +216,7 @@ button:hover {
     font-size: 1.6em;
     color: #570e1a;
 }
+
 .contacto-info p {
     margin: 20px;
     color: #ccc;
@@ -264,4 +269,48 @@ button:hover {
 footer{
     height: 30px;
     margin-top: 1px;
+}
+
+/* Media Queries */
+@media (max-width: 1023px) {
+    .NavLinks{
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    link[rel="icon"] {
+        display: none;
+    }
+    
+    .NavLinks {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #570e1a;
+        width: 150px;
+        border-radius: 8px;
+    }
+
+    .NavLinks li {
+        text-align: right;
+    }
+
+    .menuIcono {
+        display: block;
+    }
+
+    /* Mostrar menú cuando se hace clic en el icono de hamburguesa */
+    #Hamburguesa:checked + .menuIcono + .NavLinks {
+        display: flex;
+    }
+
+    #Hamburguesa {
+        display: none; /* Oculta el checkbox */
+    }
+    .contacto {
+        flex-direction: column;
+    }
 }
