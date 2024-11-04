@@ -102,6 +102,11 @@ button:hover {
     background-color: #570e1a;
     padding: 35px;
 }
+.personajes h2 {
+    font-size: 4em;
+    color: #d62f40;
+    padding: 35px;
+}
 .personajes ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -112,12 +117,12 @@ button:hover {
 .personajes ul div {
     padding: 10px;
     font-size: 1.6em;
-    position: center;
+    text-align: center;
 }
 .personajes ul div img {
     width: 680px;
     height: 400px;
-    transform: scale(0.65);
+    /*transform: scale(0.65);*/
     border-radius: 15px;
     
 }
