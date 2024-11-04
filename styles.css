@@ -143,14 +143,17 @@ button:hover {
     padding: 20px;
     
 }
-
+.galeria h2 {
+    font-size: 4em;
+    color: #d62f40;
+    padding: 35px;
+}
 .galeria img {
     width: 400px;
     height: 230px;
     cursor: pointer;
     border-radius: 5px;
 }
-
 .galeria img:hover {
     transform: scale(1.07);
 }
