@@ -14,33 +14,6 @@ function CrrVisualizador() {
     visualizador.style.display = "none";
 }
 
-/*let currentIndex = 0;
-const Imagen = document.querySelectorAll('.Imagenes') ('.galeria img');
-const Miro = document.getElementById('portaImagenes');
-const Porta = document.getElementById('Visualizador');
-
-function AbreImagen(index) {
-    currentIndex = index;
-    Porta.src = Imagen[currentIndex].src;
-    Miro.style.display = 'flex';
-}
-
-function cierraImagen(event) {
-    if (event && event.target === Miro) { // Solo cierra al hacer clic fuera de la imagen o en "X"
-        Miro.style.display = 'none';
-    } else if (!event) { // Cierra desde el botón "X"
-        Miro.style.display = 'none';
-    }
-}
-
-// Cerrar el visualizador si se hace clic en el contenedor oscuro
-Miro.addEventListener('click', function(event) {
-    if (event.target === Miro) {
-        cierraImagen();
-    }
-});*/
-
-
 
 function muestraSpoiler() {
     var spoilers = document.getElementsByClassName("Spoiler");
