@@ -3,24 +3,37 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1e1e1e;
+    background-color: #222;
     color: #fff;
 }
+h1{
+    font-size: 45px;
+}
+h2{
+    font-size: 38px;
+}
+h3{
+    font-size: 32px;
+}
+a{
+    font-size: 20px;  
+}
+p{
+    font-size: 16px;
+}
 
+                            /*NABVAR*/
 nav {
     background-color: #333;
-    padding: 15px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     position: fixed;
     top: 0;
-    width: 100%;           
+    width: 100%; 
+    height: 40px;         
     z-index: 10;             /* por encima de otros elementos */
-}
-nav input, label{
-    display: none;
 }
 
 nav ul {
@@ -30,29 +43,46 @@ nav ul {
     margin: 0;
     padding: 0;
 }
-nav ul li {
-    margin: 0 15px;
-}
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 20px;
-    padding: 8px 15px;
+    padding: 10px 15px;
     border-radius: 5px;
+    display: block;
 }
 nav ul li a:hover {
     background-color: #9c1326;
 }
 
+.Submenu{
+    display: none;
+    position: absolute;
+    min-width: 120px;
+    background-color: #333;;
+    border-radius: 5px;
+}
+.Submenu li a{
+    padding: 10px 15px;
+}
+.Submenu li a:hover{
+    background-color: #333;
+    color: #d62f40;
+}
+.SerieNav:hover .Submenu{
+    display: block;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+}
 .logo img {
     height: 26px;
     margin-left: 20px;
 }
-section{
-    padding: 35px;;
-}
 
-/* Header */
+                            /* HEADER */
 header {
     background-image: url('Imagenes/Background.png');
     background-size: cover;
@@ -63,7 +93,6 @@ header {
     position: relative;
 }
 header h1 {
-    font-size: 6em;
     margin: 0;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -91,23 +120,49 @@ button:hover {
     background-color: #c5303b;
 }
 
-.serie a{
+                            /* SERIE */
+.serie{
+    padding: 30px;
+}
+.serie h3{
+    padding-left: 35px;
+}
+.serie p{
+    padding-left: 50px;
+}
+
+
+                            /* TEMPORADAS 1 Y 2 */
+.sectionTmp{
+    background-color: #570e1a;
+}.sectionTmp h1{
+    padding: 40px;
+    margin: 25px;
+    color: #d62f40;
+}
+.episodios{
+    padding: 20px;
+    background-color: #333;
+}
+.sectionTmp a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    font-size: 2em;
+    padding: 15px;
+    font-size: 28px;
     font-weight: bold;
     color: #d62f40;
+    background-color: #333;;
 }
-
-/* Personajes */
+.sectionTmp p{
+    padding: 20px;
+}
+                            /* PERSONAJES */
 .personajes {
     background-color: #570e1a;
     padding: 35px;
 }
 .personajes h2 {
-    font-size: 4em;
     color: #d62f40;
     padding: 35px;
 }
@@ -121,31 +176,29 @@ button:hover {
 .personajes ul div {
     padding: 10px;
     font-size: 1.6em;
-    text-align: center;
+    text-align: left;
 }
 .personajes ul div img {
-    width: 680px;
-    height: 400px;
+    display: block;
+    height: auto;
+    max-width: 100%;
     /*transform: scale(0.65);*/
     border-radius: 15px;
     
 }
-
 .Spoiler, .Spoiler2 {
     display: none;
 }
 
-/* Galería sin visualizador */
+                            /* GALERIA */
 .galeria {
     display: inline-block;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
-    text-align: center;
 }
 .galeria h2 {
     display: grid;
-    font-size: 4em;
     padding: 35px;
 }
 .galeria img {
@@ -161,8 +214,10 @@ button:hover {
 /*Visualizador de imagenes */
 .galeria-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    align-items: center;
+    margin: 0 auto;
 }
 .galeria-imagen {
     height: 150px;
@@ -194,19 +249,21 @@ button:hover {
     font-size: 24px;
     cursor: pointer;
 }
+
+                            /*MITOLOGIA*/
 .mitologia{
     background-color: #570e1a;
-    font-size: 1.4em;
+    padding: 25px 15px;
 }
-/* Contacto */
+
+                            /* CONTACTO */
 .contacto {
     display: flex;
     gap: 20px;
     padding: 20px;
-    font-size: 1.4em;
 }
 /* Columna izquierda: Info*/
-.contacto-info {
+.cttoInfo {
     flex: 1;
     background-color: #333;
     padding: 20px;
@@ -216,37 +273,36 @@ button:hover {
 }
 .contacto div h3{
     margin: 20px;
-    font-size: 1.6em;
-    color: #570e1a;
+    color: #ccc;
+    text-align: center;
 }
-
-.contacto-info p {
+.cttoInfo p {
     margin: 20px;
     color: #ccc;
-    padding: 1px 10px;
+    padding: 20px;
     text-decoration: none;
 }
-.contacto-info a {
-    color: #ccc;
+.cttoInfo a {
     text-decoration: none;
+    padding: 10px;
 }
 
 /* Columna derecha: Formulario */
-.contacto-formulario {
+.cttoForm {
     flex: 1;
     padding: 1px 10px;
     background-color: #333;
     border-radius: 8px;
+    color: #9c1326;
 }
-.contacto-formulario form label {
+.cttoForm form label {
     display: block;
     margin-top: 10px;
     padding: 5px 8px;
     font-weight: bold;
     color: #ccc;
 }
-
-.contacto-formulario form input, .contacto-formulario form textarea {
+.cttoForm form input, .cttoForm form textarea {
     width: 95%;
     padding: 8px;
     margin-top: 5px;
@@ -254,8 +310,7 @@ button:hover {
     border: 1px solid #ccc;
     margin: 10px auto;
 }
-
-.contacto-formulario form button {
+.cttoForm form button {
     margin-top: 15px;
     padding: 10px 20px;
     background-color: #9c1326;
@@ -264,56 +319,159 @@ button:hover {
     cursor: pointer;
     border-radius: 4px;
 }
-
-.contacto-formulario form button:hover {
+#nombre, #email, #mensaje{
+    background-color: #222;
+    color: #ccc;
+    border-color: #222;
+}
+.cttoForm form button:hover {
     background-color: #c5303b;
 }
 
-footer{
-    height: 30px;
-    margin-top: 1px;
+                            /*FOOTERS*/
+.footerHome{
+    height: 40px;
+    background-color: #570e1a; 
+    color: white; 
+    display: flex;
+    text-align: center;
+    padding: 10px;
 }
+.footerOtro{
+    height: 40px;
+    background-color: #222; 
+    color: white; 
+    display: flex;
+    text-align: center;
+    padding: 10px;
+}
+                            /*Menu Hamburgesa*/
+  
+#menu, .menuIcono {
+    display: none;
+    width: 30px;
+    height: 30px;
+  }
 
-/* Media Queries */
-@media (max-width: 1023px) {
-    .NavLinks{
-        display: none;
+.burger{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    padding-right: 20px;
+}
+.burger span{
+    width: 25px;
+    height: 3px;
+    background-color: #d62f40;
+    transition: 0.3s;
+}
+                            /* Media Queries */
+@media (max-width: 1300px) {
+.galeria-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+@media (max-width: 768px) {/*870px es el tamaño en el que el logo de Home coliciona con el nav*/
+/*monitores pequeños*/
+    .logo{ 
+        position: static; 
+    }
+    
+    .personajes ul {
+        display: block;
+        position: relative;
     }
 }
 
 @media (max-width: 480px) {
-    link[rel="icon"] {
-        display: none;
+/*dispositivos móviles*/
+    .logo{ 
+        display: none; 
     }
-    
-    .NavLinks {
+    .burger{
+        display: flex;
+    }
+    .linkMenu{
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px;
-        right: 20px;
-        background-color: #570e1a;
-        width: 150px;
-        border-radius: 8px;
+        height: auto;
+        top: 35px; /* Justo debajo de la navbar */
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 15px 1px;
     }
-
-    .NavLinks li {
-        text-align: right;
+    .linkMenu.active{
+        display: flex;
+        background-color: #222;
     }
-
+    .Submenu{
+        display: block;  
+        position: relative;
+        padding: 1px 20px;
+        background-color: #222;
+    }
+    #menu:checked ~ .menuIcono {
+        background: #570e1a; 
+        }
+    #menu:checked  ~ ul{
+        display:block;
+        width: 100%;
+        z-index: 10;
+        }
     .menuIcono {
+        box-sizing: border-box;
+        margin: 15px;
+        display: inline-block;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        text-align: center;
+        user-select: none;
+        }
+    .mitologia{
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    .personajes ul {
+        display: block;
+        position: relative;
+    }
+    .personajes ul div img {
+        display: block;
+        max-width: 350px;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .contacto{
+        display: block;
+        padding: 1px 10px;
+    }
+    .contacto div h3{
+        padding: 10px;
+    }
+    .cttoInfo{
+        padding: 0px 10px;
+    }
+    .galeria div img {
+        max-width: 70%;
+    }
+    .galeria-imagen{
+        pointer-events: none; 
         display: block;
     }
-
-    /* Mostrar menú cuando se hace clic en el icono de hamburguesa */
-    #Hamburguesa:checked + .menuIcono + .NavLinks {
-        display: flex;
+    .galeria-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
     }
 
-    #Hamburguesa {
-        display: none; /* Oculta el checkbox */
-    }
-    .contacto {
-        flex-direction: column;
-    }
 }

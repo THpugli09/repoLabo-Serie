@@ -12,23 +12,47 @@
                                         <!-- Navbar -->
         <nav>
             <div class="logo">
-                <img onclick href="https://thpugli09.github.io/repoLabo-Serie/index.html" src="Imagenes/Logo.png" alt="Logo">
-                <input type="checkbox" id="Hamburguesa">
-                <label for="Hamburguesa" class="menuIcono">&#9776;</label>
+                <!--<img onclick href="https://thpugli09.github.io/repoLabo-Serie/index.html#homeNV" src="Imagenes/Logo.png" alt="Logo">-->
+                <!--<a title="SangredeZeus.logo" href="https://thpugli09.github.io/repoLabo-Serie/index.html#homeNV"><img src="Imagenes/Logo.png" alt="HomeLogo" /></a>-->
+                <a title="SangredeZeus.logo" href="./index.html#homeNV"><img src="Imagenes/Logo.png" alt="HomeLogo" /></a>
             </div>
-            <ul>
-                <li><a href="https://thpugli09.github.io/repoLabo-Serie/#serieNV" >Serie</a></li>
-                <li><a href="https://thpugli09.github.io/repoLabo-Serie/Personajes.html">Personajes</a></li>
-                <li><a href="https://thpugli09.github.io/repoLabo-Serie/Galeria.html">Galería</a></li>
-                <li><a href="https://thpugli09.github.io/repoLabo-Serie/#mitologiaNV" >Mitología</a></li>
-                <li><a href="https://thpugli09.github.io/repoLabo-Serie/#contactoNV" >Contacto</a></li>
+            <input type="checkbox" id="menu">
+            <label for="menu" class="menuIcono">☰</label>
+            <ul class="linkMenu">
+                <li class="home"><a href="index.html#homeNV">Inicio</a></li>
+                <li class="SerieNav"><a href="#">Serie</a>
+                    <ul class="Submenu">
+                        <li><a href="./Temporada1.html">Temporada 1</a>
+                        <li><a href="./Temporada2.html">Temporada 2</a>
+                    </ul>
+                </li>
+                <li><a href="./Personajes.html">Personajes</a></li>
+                <li><a href="./Galeria.html">Galería</a></li>
+                <li><a href="./Mitologia.html">Mitología</a></li>
+                <li><a href="./index.html#contactoNV">Contacto</a></li>
+                <!--
+            <li><a href="https://thpugli09.github.io/repoLabo-Serie/Personajes.html">Personajes</a></li>
+                <input type="checkbox" id="menu">
+                <label for="menu" class="menuIcono">☰</label>
+                <ul class="linkMenu">
+                    <li class="home"><a href="https://thpugli09.github.io/repoLabo-Serie/index.html#serieNV">Inicio</a></li>
+                    <li class="SerieNav"><a href="#">Serie</a>
+                        <ul class="Submenu">
+                            <li><a href="https://thpugli09.github.io/repoLabo-Serie/Temporada1.html">Temporada 1</a>
+                            <li><a href="https://thpugli09.github.io/repoLabo-Serie/Temporada2.html">Temporada 2</a>
+                        </ul>
+                    </li>
+                    <li><a href="https://thpugli09.github.io/repoLabo-Serie/Personajes.html">Personajes</a></li>
+                    <li><a href="https://thpugli09.github.io/repoLabo-Serie/Galeria.html">Galería</a></li>
+                    <li><a href="https://thpugli09.github.io/repoLabo-Serie/Mitologia.html">Mitología</a></li>
+                    <li><a href="https://thpugli09.github.io/repoLabo-Serie/index.html#contactoNV">Contacto</a></li>-->
             </ul>
         </nav>
     </body>
 
     <!-- Personajes -->
     <section id="personajesNV" class="personajes">
-        <h2>Personajes:</h2>
+        <h1>Personajes:</h1>
         <ul>
             <div>
                 <h3>Heron</h3>
@@ -86,7 +110,7 @@
             </div>
         </ul>
     </section>
-    <footer style="background-color: #570e1a; color: white; text-align: center; padding: 15px; font-size: 14px;">
+    <footer class="footerOtro">
         <p>&copy; 2024 Blood of Zeus Fanpage. Todos los derechos reservados.Creado por Pugliese Thomas - 27777</p>
     </footer>
 </html>

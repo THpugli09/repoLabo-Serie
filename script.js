@@ -4,7 +4,6 @@ function AbrVisualizador(imagen) {
 
     visualizador.style.display = "flex";
     visualizadorImg.src = imagen.src;
-
     visualizadorImg.style.width = "100%";
     visualizadorImg.style.height = "auto";
 }
