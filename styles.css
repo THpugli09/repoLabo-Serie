@@ -335,6 +335,7 @@ button:hover {
     color: white; 
     display: block;
     text-align: center;
+    align-items: center;
     padding: 10px;
 }
 .footerOtro{
@@ -343,6 +344,7 @@ button:hover {
     color: white; 
     display: block;
     text-align: center;
+    align-items: center;
     padding: 10px;
 }
                             /*Menu Hamburgesa*/
