@@ -53,7 +53,9 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #9c1326;
 }
-
+.inicio{
+    display: none;
+}
 .Submenu{
     display: none;
     position: absolute;
@@ -253,7 +255,8 @@ button:hover {
                             /*MITOLOGIA*/
 .mitologia{
     background-color: #570e1a;
-    padding: 25px 15px;
+    padding: 25px;
+
 }
 
                             /* CONTACTO */
@@ -337,7 +340,9 @@ button:hover {
     text-align: center;
     align-items: center;
     padding: 10px;
+    height: 30px;
 }
+
 .footerOtro{
     height: 40px;
     background-color: #222; 
@@ -346,6 +351,7 @@ button:hover {
     text-align: center;
     align-items: center;
     padding: 10px;
+    height: 30px;
 }
                             /*Menu Hamburgesa*/
   
@@ -372,11 +378,14 @@ button:hover {
 @media (max-width: 1300px) {
 .galeria-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
     }
+    .inicio{
+        display: none;
+    }
 }
-@media (max-width: 768px) {/*870px es el tamaño en el que el logo de Home coliciona con el nav*/
+@media (max-width: 768px) {
 /*monitores pequeños*/
     .logo{ 
         position: static; 
@@ -392,6 +401,12 @@ button:hover {
 /*dispositivos móviles*/
     .logo{ 
         display: none; 
+    }
+    .inicio{
+        display: flex;
+    }
+    .home{
+        display: flex;
     }
     .burger{
         display: flex;
