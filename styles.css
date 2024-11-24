@@ -333,7 +333,7 @@ button:hover {
     height: 40px;
     background-color: #570e1a; 
     color: white; 
-    display: flex;
+    display: block;
     text-align: center;
     padding: 10px;
 }
@@ -341,7 +341,7 @@ button:hover {
     height: 40px;
     background-color: #222; 
     color: white; 
-    display: flex;
+    display: block;
     text-align: center;
     padding: 10px;
 }
